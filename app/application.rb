@@ -23,7 +23,7 @@ class Application
         @@cart.each do |item|
           resp.write "#{item}\n"
         end
-      else 
+      else
         resp.write "Your cart is empty"
     elsif req.path.match(/search/)
       search_term = req.params["q"]
