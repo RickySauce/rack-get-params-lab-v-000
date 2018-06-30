@@ -1,4 +1,4 @@
-require 'pry'
+
 
 class Application
 
@@ -21,7 +21,6 @@ class Application
     end
 
     if req.path.match(/add/)
-      binding.pry
       search_term = req.params["q"]
       if @@items.include?(search_term)
         resp.write "added #{search_term}"
